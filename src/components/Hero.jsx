@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
-import { FaPlay, FaPause } from "react-icons/fa";
 
 const text = "I'm Truly Sorry ❤️";
 
