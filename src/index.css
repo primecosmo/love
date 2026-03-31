@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Glow button */
+.glow-btn {
+  box-shadow: 0 0 20px rgba(255, 105, 135, 0.6);
+}
+
+/* Floating hearts animation */
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+
+.heart {
+  position: absolute;
+  color: #ff4d6d;
+  animation: float linear infinite;
+}

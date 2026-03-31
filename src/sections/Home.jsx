@@ -3,14 +3,13 @@ import HeroImg from "../assets/sr2.jpg";
 
 export default function Home() {
   return (
-    <section className="min-h-screen pt-40 bg-[#F6EFEA] text-[#2F2F2F] relative overflow-hidden pt-30 lg:pt-35">
+    <section className="min-h-screen pt-40 bg-[#F6EFEA] text-[#2F2F2F] relative overflow-hidden">
 
       {/* MAIN WRAPPER */}
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-16">
 
         {/* LEFT CONTENT */}
         <div className="flex-1 z-10 flex flex-col items-center lg:items-start">
-
           <div className="text-center lg:text-left">
 
             {/* TAG */}
@@ -37,55 +36,68 @@ export default function Home() {
 
               <div className="text-base leading-snug text-center sm:text-left">
                 <p className="font-semibold">100% Organic</p>
-                <p className="text-[#2F2F2F]/60">Let your skin glow naturally</p>
+                <p className="text-[#2F2F2F]/60">
+                  Let your skin glow naturally
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="flex-1 relative flex justify-center lg:justify-end">
+        <div className="flex-1 flex justify-center lg:justify-end relative">
+          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[420px] lg:h-[420px]">
 
-          {/* GOLD RING */}
-          <div
-            className="
-              absolute 
-              w-[320px] h-80 sm:w-95 sm:h-95 lg:w-106.5 lg:h-106.5
-              rounded-full 
-              border-28 sm:border-32 lg:border-36
-              border-[#E6B65C] 
-              -top-2 -right-2
-              z-0
-            "
-          />
-
-          {/* IMAGE */}
-          <div className="relative z-10 w-[320px] h-80 sm:w-95 sm:h-95 lg:w-105 lg:h-105 rounded-full overflow-hidden shadow-2xl bg-white">
-            <img
-              src={HeroImg}
-              alt="Skincare Experts"
-              className="w-full h-full object-cover"
+            {/* YELLOW RING */}
+            <div
+              className="
+                absolute inset-0
+                rounded-full
+                border-[14px] sm:border-[18px] lg:border-[22px]
+                border-[#E6B65C]
+                shadow-[0_20px_60px_rgba(230,182,92,0.25)]
+              "
             />
-          </div>
 
-          {/* BADGE */}
-          <div
-            className="
-              absolute 
-              -bottom-3 right-0 sm:right-2.5
-              w-28 h-28 sm:w-32 sm:h-32 lg:w-36 lg:h-36
-              rounded-full 
-              flex items-center justify-center 
-              text-[11px] sm:text-[12px]
-              uppercase tracking-widest 
-              text-white
-              bg-[#6B3F2A]/90
-              backdrop-blur 
-              z-20
-              text-center
-            "
-          >
-            Natural <br /> Beauty <br /> Skin
+            {/* IMAGE */}
+            <div
+              className="
+                absolute inset-[12px] sm:inset-[16px] lg:inset-[18px]
+                rounded-full
+                overflow-hidden
+                shadow-2xl
+                bg-white
+                z-10
+              "
+            >
+              <img
+                src={HeroImg}
+                alt="Skincare Experts"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* BADGE */}
+            <div
+              className="
+                absolute
+                -bottom-4 -right-4
+                sm:-bottom-6 sm:-right-6
+                w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32
+                rounded-full
+                flex items-center justify-center
+                text-[10px] sm:text-[11px]
+                uppercase tracking-widest
+                text-white
+                bg-[#6B3F2A]/90
+                backdrop-blur
+                z-20
+                text-center
+              "
+            >
+              Natural <br /> Beauty <br /> Skin
+            </div>
+
           </div>
         </div>
       </div>
@@ -108,6 +120,7 @@ export default function Home() {
           </div>
         ))}
       </div>
+
     </section>
   );
 }

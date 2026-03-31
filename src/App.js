@@ -1,26 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./components/Hero";
+import ApologyCard from "./components/ApologyCard";
+import LoveReasons from "./components/LoveReasons";
+import MusicPlayer from "./components/MusicPlayer";
 
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./sections/Footer.jsx";
-import WhatsAppButton from "./components/WhatsAppButton.jsx";
-import Main from "./pages/Main.jsx";
-
-
-export default function App() {
+function App() {
   return (
-    <Router>
-      <div className="relative gradient text-white min-h-screen">
-        <WhatsAppButton
-          phone="447521440329"
-          message="Hello! I saw your website and would like to connect with WEBBLIXO."
-        />
-        <Navbar />
-
-        <Routes>
-          <Route path="/" element={<Main />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="bg-pink-50 text-gray-800 overflow-x-hidden">
+      {/* <MusicPlayer /> */}
+      <Hero />
+      {/* <ApologyCard />
+      <LoveReasons /> */}
+    </div>
   );
 }
+
+export default App;
